@@ -64,7 +64,7 @@ class GuruController extends Controller
         if ($file = $request->file('photo_id')) {
 
 
-            $name = time() . $file->getClientOriginalName();
+            $name = time() . '-guru-' . $file->getClientOriginalName();
 
             $distanationPath = 'images/profile-guru';
 
@@ -151,7 +151,7 @@ class GuruController extends Controller
         if ($file = $request->file('photo_id')) {
 
 
-            $name = time() . $file->getClientOriginalName();
+            $name = time() . '-guru-' . $file->getClientOriginalName();
 
             $distanationPath = 'images/profile-guru';
 

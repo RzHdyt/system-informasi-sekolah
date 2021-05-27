@@ -99,19 +99,17 @@
 
                                     <div class="form-group">
                                         <label for="jabatan">Jabatan</label>
-                                        <input type="text" class="form-control" name="jabatan" id="jabatan"
-                                            placeholder="Masukan Jabatan" value="{{ old('jabatan') }}">
-                                        <small small id="photoHelp" class="form-text text-muted">
-                                            * note untuk input jabatan seperti dibawah ini :
-                                            (Penulisan atau ketikan harus sama, <b> dilalui huruf capital terlebih
-                                                dahulu!!! </b>)
-                                            <ul>
-                                                <li>Pemilik Yayasan (Jika ada)</li>
-                                                <li>Kepala Sekolah</li>
-                                                <li>Wakil Kepala Sekolah</li>
-                                                <li>Guru</li>
-                                            </ul>
-                                        </small>
+                                        <select class="form-control" name="jabatan" id="jabatan">
+                                            <option value="">Choose Options</option>
+                                            <option value="Yayasan" @if(old('jabatan')=='Yayasan' ) selected="selected"
+                                                @endif> Yayasan (jika ada) </option>
+                                            <option value="Kepsek" @if(old('jabatan')=='Kepsek' ) selected="selected"
+                                                @endif> Kepala Sekolah </option>
+                                            <option value="Wa-Kepsek" @if(old('jabatan')=='Wa-Kepsek' )
+                                                selected="selected" @endif> Wakil Kepala Sekolah</option>
+                                            <option value="Guru" @if(old('jabatan')=='Guru' ) selected="selected"
+                                                @endif> Guru </option>
+                                        </select>
 
                                         @error('jabatan')
                                         <div class="invalid-feedback" style="display: block !important;">{{ $message }}

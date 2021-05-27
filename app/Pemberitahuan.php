@@ -11,12 +11,13 @@ class Pemberitahuan extends Model
         'judul',
         'isi',
         'status',
+        'author',
 
         'photo_id'
     ];
 
     public function photoPemberitahuan()
     {
-        return $this->belongsTo(Photo::class);
+        return $this->belongsTo(Photo::class, 'photo_id');
     }
 }

@@ -17,19 +17,19 @@
                             <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
                                 <div class="carousel-inner">
                                     <div class="carousel-item active">
-                                        <img src="{{ asset('images/profile-guru/1621790754mortarboard.png') }}"
+                                        <img src="{{ asset('images/profile-sekolah/profile-sekolah1.jpg') }}"
                                             class="d-block w-100" alt="..." style="height: 15rem">
                                     </div>
                                     <div class="carousel-item">
-                                        <img src="{{ asset('images/profile-guru/1621789774dummy-image.jpg') }}"
+                                        <img src="{{ asset('images/profile-sekolah/profile-sekolah2.jpg') }}"
                                             class="d-block w-100" alt="..." style="height: 15rem">
                                     </div>
                                     <div class="carousel-item">
-                                        <img src="{{ asset('images/profile-guru/1622026115buzz-andersen-IOKqP2VnHoc-unsplash.jpg') }}"
+                                        <img src="{{ asset('images/profile-sekolah/profile-sekolah3.jpg') }}"
                                             class="d-block w-100" alt="..." style="height: 15rem">
                                     </div>
                                     <div class="carousel-item">
-                                        <img src="{{ asset('images/profile-guru/1621789774dummy-image.jpg') }}"
+                                        <img src="{{ asset('images/profile-sekolah/profile-sekolah4.png') }}"
                                             class="d-block w-100" alt="..." style="height: 15rem">
                                     </div>
                                 </div>

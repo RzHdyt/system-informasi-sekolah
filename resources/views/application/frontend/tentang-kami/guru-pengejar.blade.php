@@ -10,6 +10,8 @@
 
         <div class="card col-sm-12 col-lg-12 mt-3 mb-2">
             <div class="card-body col-sm-12 col-lg-12">
+                <h2>Jajaran Guru Sekolah</h2>
+                <hr>
                 <div class="row">
                     @foreach ($gurus as $guru)
                     @if ($guru['jabatan'] == 'guru')
@@ -24,8 +26,8 @@
                                     <span class="text-bold text-lg-center">
                                         <b> {{ $guru->nama }} </b><br>
                                         {{ $guru->jabatan }} {{ $guru->mapel }} <br>
-                                        {{ $guru->agama }}
-                                        {{ $guru->umur }}
+                                        {{ $guru->agama }} <br>
+                                        {{ $guru->umur }} Tahun
                                     </span>
                                 </p>
                                 <p class="text-bold text mt-lg-5 mb-0 ">{{ $guru->nomer_induk }}

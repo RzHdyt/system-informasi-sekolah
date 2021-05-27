@@ -25,12 +25,19 @@
                                 <p class="text-bold text-center">
                                     <span class="text-bold text-lg-center">
                                         <b> {{ $guru->nama }} </b><br>
-                                        {{ $guru->jabatan }} {{ $guru->mapel }} <br>
+                                        @if ($guru->jabatan == 'Yayasan')
+                                        Yayasan
+                                        @elseif ($guru->jabatan == 'Kepsek')
+                                        Kepala Sekolah
+                                        @else
+                                        Wakil Kepala Sekolah
+                                        @endif
+                                        {{ $guru->mapel }} <br>
                                         {{ $guru->agama }} <br>
-                                        {{ $guru->umur }} tahun
+                                        {{ $guru->umur }} Tahun
                                     </span>
                                 </p>
-                                <p class="text-bold text mt-lg-5 mb-0 ">{{ $guru->nomer_induk }}
+                                <p class="text-bold text-center mt-lg-5 mb-0 ">{{ $guru->nomer_induk }}
                                 </p>
                             </div>
                         </div>

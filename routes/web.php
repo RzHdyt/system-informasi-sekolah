@@ -48,6 +48,7 @@ Route::prefix('application')->namespace('Application\Web')->name('admin.')->midd
     Route::get('/pemberitahuan', 'PemberitahuanController@index')->name('pemberitahuan.index');
     Route::get('/pemberitahuan/create', 'PemberitahuanController@create')->name('pemberitahuan.create');
     Route::post('/pemberitahuan/store', 'PemberitahuanController@store')->name('pemberitahuan.store');
+    Route::put('/pemberitahuan/{id}', 'PemberitahuanController@approveStatus')->name('pemberitahuan.approveStatus');
     Route::get('/pemberitahuan/edit/{id}', 'PemberitahuanController@edit')->name('pemberitahuan.edit');
     Route::put('/pemberitahuan/update/{id}', 'PemberitahuanController@update')->name('pemberitahuan.update');
     Route::delete('/pemberitahuan/delete/{id}', 'PemberitahuanController@destroy')->name('pemberitahuan.destroy');

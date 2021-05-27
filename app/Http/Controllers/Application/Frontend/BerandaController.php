@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Application\Frontend;
 use App\Guru;
 use Carbon\Carbon;
 use App\Http\Controllers\Controller;
+use App\Pemberitahuan;
 use Illuminate\Http\Request;
 use Illuminate\Pagination\LengthAwarePaginator;
 
@@ -45,9 +46,9 @@ class BerandaController extends Controller
      */
     public function sambutanKepsek()
     {
-        $gurus = Guru::paginate(3);
+        $pemberitahuans = Pemberitahuan::where('author', 'Kepsek')->paginate(3);
         return view('application.frontend.tentang-kami.sambutan-kepsek', [
-            'gurus' => $gurus,
+            'pemberitahuans' => $pemberitahuans,
         ]);
     }
 
@@ -111,16 +112,10 @@ class BerandaController extends Controller
      */
     public function kegiatan()
     {
-        return view('application.frontend.kegiatan-sekolah.kegiatan');
-    }
+        $pemberitahuans = Pemberitahuan::where('author', 'Admin')->paginate(3);
 
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function displayGuru($id)
-    {
-        # code...
+        return view('application.frontend.kegiatan-sekolah.kegiatan', [
+            'pemberitahuans' => $pemberitahuans,
+        ]);
     }
 }
