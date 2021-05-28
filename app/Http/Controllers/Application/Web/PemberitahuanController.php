@@ -66,13 +66,13 @@ class PemberitahuanController extends Controller
             $photo = Photo::create(['file_photo' => "/" . $name]);
 
             $photo = $photo->id;
+            $pemberitahuans->photo_id = $photo;
         }
 
         $pemberitahuans->judul = $request->judul;
         $pemberitahuans->isi = $request->isi;
         $pemberitahuans->author = $request->author;
 
-        $pemberitahuans->photo_id = $photo;
 
         DB::transaction(function () use ($pemberitahuans) {
             $pemberitahuans->save();

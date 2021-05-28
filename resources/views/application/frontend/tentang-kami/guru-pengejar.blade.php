@@ -14,7 +14,7 @@
                 <hr>
                 <div class="row">
                     @foreach ($gurus as $guru)
-                    @if ($guru['jabatan'] == 'guru')
+                    @if ($guru['jabatan'] == 'Guru')
                     <div class="col-sm-3 col-lg-3  mt-3 mb-3">
                         <div class="card col-auto col-sm-auto">
                             <img src="{{ asset('images/profile-guru' . $guru->photoGuru['file_photo'] ) }}"
@@ -30,7 +30,7 @@
                                         {{ $guru->umur }} Tahun
                                     </span>
                                 </p>
-                                <p class="text-bold text mt-lg-5 mb-0 ">{{ $guru->nomer_induk }}
+                                <p class="text-bold text-center mt-lg-5 mb-0 ">{{ $guru->nomer_induk }}
                                 </p>
                             </div>
                         </div>

@@ -19,7 +19,7 @@ class BerandaController extends Controller
     public function beranda()
     {
         $no = 0;
-        $gurus = Guru::where('jabatan', '!=', 'guru')->paginate(4);
+        $gurus = Guru::where('jabatan', '!=', 'Guru')->paginate(4);
 
         foreach ($gurus as $guru) {
             $dateIn = date_create($guru->tanggal_lahir);
@@ -86,7 +86,7 @@ class BerandaController extends Controller
      */
     public function guruPengajar()
     {
-        $gurus = Guru::where('jabatan', 'guru')->paginate(8);
+        $gurus = Guru::where('jabatan', 'Guru')->paginate(8);
 
         foreach ($gurus as $guru) {
             $dateIn = date_create($guru->tanggal_lahir);

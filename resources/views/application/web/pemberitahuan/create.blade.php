@@ -120,7 +120,7 @@
                                 <button type="submit"
                                     class="btn btn-outline-light col-lg-6 mb-3 mr-auto ml-auto text-bold"
                                     style="color: black; background: blue">
-                                    Buta Pemberitahuan</button>
+                                    Buat Pemberitahuan</button>
 
                             </div>
                         </form>

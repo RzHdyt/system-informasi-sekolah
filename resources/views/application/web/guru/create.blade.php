@@ -197,7 +197,7 @@
                                 <button type="submit"
                                     class="btn btn-outline-light col-lg-6 mb-3 mr-auto ml-auto text-bold"
                                     style="color: black; background: blue">
-                                    Update Guru</button>
+                                    Created Guru</button>
 
                             </div>
                         </form>

@@ -31,16 +31,26 @@
                 <hr>
 
                 @foreach ($pemberitahuans as $pemberitahuan)
+
                 @if ($pemberitahuan->status == 1 && $pemberitahuan->author == 'Admin' )
                 <div class="row">
+                    @if (!empty($pemberitahuan->photoPemberitahuan['file_photo']))
                     <div class="col-sm-3 col-lg-3  mt-3 mb-3">
                         <div class="card col-auto col-sm-auto">
                             <img src="{{ asset('images/pemberitahuan/' .$pemberitahuan->photoPemberitahuan['file_photo'] ) }}"
-                                class="card-img-top mt-2 mb-2" alt="..."
-                                style="height: 150px; max-width: 100%; object-fit: contain; ">
+                            class="card-img-top mt-2 mb-2" alt="..."
+                            style="height: 150px; max-width: 100%; object-fit: contain; ">
                         </div>
                         <hr>
                     </div>
+
+                    @else
+                    <div class="col-sm-3 col-lg-3  mt-3 mb-3">
+
+                    </div>
+                    @endif
+
+
 
                     <div class="col-sm-9 col-lg-9  mt-3 mb-3 ">
                         <h1>{{ $pemberitahuan->judul }}</h1>

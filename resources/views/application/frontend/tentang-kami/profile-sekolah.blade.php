@@ -17,7 +17,7 @@
                             <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
                                 <div class="carousel-inner">
                                     <div class="carousel-item active">
-                                        <img src="{{ asset('images/profile-sekolah/profile-sekolah1.jpg') }}"
+                                        <img src="{{ asset('images/profile-sekolah/img-1.JPG') }}"
                                             class="d-block w-100" alt="..." style="height: 15rem">
                                     </div>
                                     <div class="carousel-item">

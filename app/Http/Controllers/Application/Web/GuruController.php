@@ -73,6 +73,7 @@ class GuruController extends Controller
             $photo = Photo::create(['file_photo' => "/" . $name]);
 
             $photo = $photo->id;
+            $guru->photo_id = $photo;
         }
 
         $guru->nomer_induk = $request->nomer_induk;
@@ -84,7 +85,6 @@ class GuruController extends Controller
         $guru->jabatan = $request->jabatan;
         $guru->agama = $request->agama;
 
-        $guru->photo_id = $photo;
 
         DB::transaction(function () use ($guru) {
             $guru->save();
@@ -159,6 +159,7 @@ class GuruController extends Controller
 
             $photo = Photo::create(['file_photo' => "/" . $name]);
 
+            $guru->photo_id = $photo;
             $photo = $photo->id;
         }
 
@@ -171,7 +172,6 @@ class GuruController extends Controller
         $guru->jabatan = $request->jabatan;
         $guru->agama = $request->agama;
 
-        $guru->photo_id = $photo;
 
         DB::transaction(function () use ($guru) {
             $guru->save();
