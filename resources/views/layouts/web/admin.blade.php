@@ -60,10 +60,10 @@
 
         <footer class="main-footer">
             <div class="card-footer" style="color: black; background: white">
-                <strong>AYU ..........</strong>
+                <strong>2021</strong>
 
                 <div class="float-right d-none d-sm-inline-block">
-                    <b>UNIVERSITAS ..........</b>
+                    <b>SMP Nurul Halim Widasari</b>
                 </div>
             </div>
         </footer>

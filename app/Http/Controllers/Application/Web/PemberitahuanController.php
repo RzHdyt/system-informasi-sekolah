@@ -174,8 +174,9 @@ class PemberitahuanController extends Controller
     {
         // $pemberitahuans = Pemberitahuan::where('id', $id)->first();
         $pemberitahuans = Pemberitahuan::findOrFail($id);
+        if (!empty($pemberitahuans->photoPemberitahuan->file_photo)){
         unlink(public_path('/images/pemberitahuan/') . $pemberitahuans->photoPemberitahuan->file_photo);
-
+        }
         DB::transaction(function () use ($pemberitahuans) {
             $pemberitahuans->delete();
         }, 5);

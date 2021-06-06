@@ -26,7 +26,7 @@
                 <div class="card">
 
                     <div class=" card-header">
-                        <h3 class="card-title">Update Data Guru Sekolah Negeri Bayangan</h3>
+                        <h3 class="card-title">Update Pemberitahuan SMP Nurul Halim Widasari</h3>
                     </div>
                     <!-- /.card-header -->
                     <div class="card-body">
@@ -138,7 +138,7 @@
                                 <button type="submit"
                                     class="btn btn-outline-light col-lg-6 mb-3 mr-auto ml-auto text-bold"
                                     style="color: black; background: blue">
-                                    Update Guru</button>
+                                    Update Pemberitahuan</button>
                             </div>
                         </form>
 

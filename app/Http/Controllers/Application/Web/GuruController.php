@@ -194,8 +194,9 @@ class GuruController extends Controller
     public function destroy($id)
     {
         $gurus = Guru::where('id', $id)->first();
-
+        if(!empty($gurus->photoGuru->file_photo)) {
         unlink(public_path('/images/profile-guru/') . $gurus->photoGuru->file_photo);
+        }
 
         DB::transaction(function () use ($gurus) {
             $gurus->delete();
