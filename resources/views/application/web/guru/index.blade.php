@@ -10,7 +10,7 @@
             <div class="col-sm-6">
                 <ol class="breadcrumb float-sm-right">
                     <li class="breadcrumb-item"><a href="{{ route('admin.home') }}">Dashboard</a></li>
-                    <li class="breadcrumb-item active">Data Guru</li>
+                    <li class="breadcrumb-item active">Data Guru & Staf</li>
                 </ol>
             </div>
         </div>
@@ -24,7 +24,7 @@
             <div class="col-12">
                 <div class="card">
                     <div class="card-header">
-                        <h3 class="card-title">Data Guru SMP Nurul Halim Widasari</h3>
+                        <h3 class="card-title">Data Guru & Staf SMP Nurul Halim Widasari</h3>
                     </div>
                     <!-- /.card-header -->
                     <div class="card-body">
@@ -43,18 +43,19 @@
                             @endif
                             <!--End Message Status -->
                         </div>
-                        <a href="{{ route('admin.guru.create') }}" class="button btn btn-outline-dark">Tambah (+)</a>
-                        <table id="example2" class="table table-bordered table-hover">
+                        <a href="{{ route('admin.guru.create') }}" class="button btn btn-outline-dark">Tambah Data (+)</a>
+                        <table id="" class="table table-bordered table-hover">
                             <thead>
                                 <tr>
                                     <th>No</th>
                                     <th>Photo</th>
-                                    <th>Nomer Induk</th>
+                                    <th>Nomer Induk Yayasan</th>
                                     <th>Nama</th>
                                     <th>Tempat Lahir</th>
                                     <th>Tangal Lahir</th>
                                     <th>Agama</th>
-                                    <th>Jabataan & Mata Pelajaran</th>
+                                    <th>Jabatan & Mata Pelajaran</th>
+                                    <th>Tahun Menjabat</th>
                                     <th>Jenis Kelamin</th>
                                 </tr>
                             </thead>
@@ -81,6 +82,7 @@
                                     <td>{{ $guru->tanggal_lahir }}</td>
                                     <td>{{ $guru->agama }}</td>
                                     <td>{{ $guru->jabatan }} {{ $guru->mapel }}</td>
+                                    <td>{{ $guru->tahun_menjabat}}
                                     <td>{{ $guru->gender == 'L' ? 'Laki - Laki' : 'Perumpuan' }}</td>
                                 </tr>
                             </tbody>
@@ -88,6 +90,12 @@
                             @endif
                         </table>
                     </div>
+                    <nav aria-label="Page navigation example" class="pr-4 pl-4">
+                        <div class="d-flex justify-content-between">
+                            Total Data : {{ $gurus->count() }}
+                            {{ $gurus->links() }}
+                        </div>
+                    </nav>
                     <!-- /.card-body -->
                 </div>
                 <!-- /.card -->

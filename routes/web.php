@@ -20,7 +20,7 @@ use Illuminate\Support\Facades\Auth;
 
 Route::prefix('/')->namespace('Application\Frontend')->group(function () {
     Route::get('/', 'BerandaController@beranda')->name('beranda');
-    Route::get('/sambutan-kepala-sekolah', 'BerandaController@sambutanKepsek')->name('sambutan-kepala-sekolah');
+    Route::get('/prestasi-sekolah', 'BerandaController@prestasiSekolah')->name('prestasi-sekolah');
     Route::get('/visi-misi', 'BerandaController@visiMisi')->name('visi-misi');
     Route::get('/profile-sekolah', 'BerandaController@profileSekolah')->name('profile-sekolah');
     Route::get('/guru-pengajar', 'BerandaController@guruPengajar')->name('guru-pengajar');

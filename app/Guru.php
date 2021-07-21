@@ -17,6 +17,7 @@ class Guru extends Model
         'mapel',
         'jabatan',
         'status',
+        'tahun_menjabat',
 
         'photo_id'
     ];

@@ -17,7 +17,7 @@
     </div>
 
     <!-- SidebarSearch Form -->
-    <div class="form-inline">
+    {{-- <div class="form-inline">
         <div class="input-group" data-widget="sidebar-search">
             <input class="form-control form-control-sidebar" type="search" placeholder="Search" aria-label="Search">
             <div class="input-group-append">
@@ -26,7 +26,7 @@
                 </button>
             </div>
         </div>
-    </div>
+    </div> --}}
 
     <nav class="mt-2">
         <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
@@ -44,7 +44,7 @@
                 <a href="{{ route('admin.guru.index') }}" class="nav-link">
                     <i class="nav-icon fa fa-certificate"></i>
                     <p>
-                        Data Guru
+                        Data Guru Pengajar & Staf
                     </p>
                 </a>
             </li>

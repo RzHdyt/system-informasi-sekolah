@@ -4,7 +4,7 @@
 <div class="login-box">
     <div class="card-header text-center">
         <!-- /.login-logo -->
-        <h1>Selamat datang,</h1>
+        <h1>Selamat datang</h1>
         Silahkan Login Terlebih Dahulu
         <br>
     </div>
@@ -50,7 +50,7 @@
             </form>
 
             <p class="mb-0">
-                <a href="register.html" class="text-center">Register a new membership</a>
+                <a href="{{route('register')}}" class="text-center">Register a new membership</a>
             </p>
         </div>
         <!-- /.card-body -->

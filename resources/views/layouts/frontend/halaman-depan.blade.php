@@ -5,11 +5,11 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="if you like this content - contact me (628993766315 ~ rizky) ">
-    <meta name="author" content="rizky">
-    <meta name="generator" content="rizky">
-
+    <meta name="description" content=" ">
+    <meta name="author" content=" ">
+    <meta name="generator" content=" ">
     @yield('title')
+    @yield('style')
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="{{ asset('assests/bootstrap-4.5.3-dist/css/bootstrap.min.css') }}">
@@ -58,6 +58,7 @@
             });
     </script>
 
-</body>
+        @yield('scripts')
 
+</body>
 </html>

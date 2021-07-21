@@ -14,8 +14,8 @@
             <div class="col-sm-6">
                 <ol class="breadcrumb float-sm-right">
                     <li class="breadcrumb-item"><a href="{{ route('admin.home') }}">Dashboard</a></li>
-                    <li class="breadcrumb-item"><a href="{{ route('admin.guru.index') }}">Data Guru</a></li>
-                    <li class="breadcrumb-item active">Tambah Data Guru</li>
+                    <li class="breadcrumb-item"><a href="{{ route('admin.pemberitahuan.index') }}">Pemberitahuan</a></li>
+                    <li class="breadcrumb-item active">Tambah Pemberitahuan</li>
                 </ol>
             </div>
         </div>
@@ -60,14 +60,16 @@
 
                                     <div class="form-group">
                                         <label for="photo_id">Photos</label>
-                                        <input type="file" name="photo_id" id="photo_id" class="form-control"
+                                        <input type="file" id="photo_id" name="photo_id" id="photo_id" multiple class="form-control"
                                             value="{{ old('photo_id') }}">
 
                                         @error('photo')
                                         <div class="invalid-feedback" style="display: block !important;">{{ $message }}
                                         </div>
                                         @enderror
+
                                     </div>
+
 
                                     <div class="form-group">
                                         <label for="judul">Judul</label>
@@ -81,7 +83,7 @@
                                     </div>
 
                                     <div class="form-group">
-                                        <label for="isi">Isi Pengumuman</label>
+                                        <label for="isi">Isi Pemberitahuan&nbsp;&nbsp;*Wajib diisi</label>
                                         <textarea class="form-control" name="isi" id="isi" placeholder="Enter Text"
                                             value="{{ old('isi') }}" cols="30" rows="10"></textarea>
 
@@ -92,20 +94,20 @@
                                     </div>
 
                                     <div class="form-group">
-                                        <label for="author">Pembuat</label>
-                                        <select class="form-control" name="author" id="author">
+                                        <label for="jenis">Jenis Pemberitahuan</label>
+                                        <select class="form-control" name="jenis" id="jenis">
                                             <option value="">Choose Options</option>
-                                            <option value="Kepsek" @if(old('author')=='Kepsek' ) selected="selected"
+                                            <option value="prestasi" @if(old('jenis')=='prestasi' ) selected="selected"
                                                 @endif>
-                                                Kepala Sekolah
+                                                Prestasi
                                             </option>
-                                            <option value="Admin" @if(old('author')=='Admin' ) selected="selected"
+                                            <option value="kegiatan" @if(old('jenis')=='kegiatan' ) selected="selected"
                                                 @endif>
-                                                Admin
+                                                Kegiatan
                                             </option>
                                         </select>
 
-                                        @error('author')
+                                        @error('jenis')
                                         <div class="invalid-feedback" style="display: block !important;">{{ $message }}
                                         </div>
                                         @enderror

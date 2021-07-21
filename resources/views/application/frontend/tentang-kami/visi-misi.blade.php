@@ -16,7 +16,7 @@
                             <h1 class="mt-3 mb-0">VISI</h1>
                             <hr>
                             <div class="card-body col-sm-12 col-lg-12">
-                                <p>ROHMATAN</p>
+                                <p><h6>ROHMATAN</h6></p>
                                 {{-- if using list --}}
                                 <ul class="text-lg-left">
                                     <li>R   = Religius</li>
@@ -30,14 +30,12 @@
                                 </ul>
                             </div>
                         </div>
-
                     </div>
 
                     <div class="col-sm-6 col-lg-6 text-lg-center">
                         <div class="card col-sm-12 col-lg-12 mt-3 mb-2">
                             <h1 class="mt-3 mb-0">MISI</h1>
                             <hr>
-
                                 {{-- if using list --}}
                                 <ul class="text-lg-left">
                                     <li>Membentuk generasi yang Religius</li>
@@ -48,45 +46,47 @@
                                     <li>Membentuk generasi yang berakhlakul karimah</li>
                                     <li>Menumbuh kembangkan jiwa Nasional pada peserta didik</li>
                                 </ul>
-
                         </div>
                     </div>
                 </div>
 
-                <div class="col-sm-6 col-lg-6 text-lg-center">
-                    <div class="card col-sm-12 col-lg-12 mt-3 mb-2">
-                        <h1 class="mt-3 mb-0">TUJUAN</h1>
-                        <hr>
+                <div class="row">
+                    <div class="col-sm-6 col-lg-6 text-lg-center">
+                        <div class="card col-sm-12 col-lg-12 mt-3 mb-2">
+                            <h1 class="mt-3 mb-0">TUJUAN</h1>
+                            <hr>
+                            <div class="card-body col-sm-12 col-lg-12">
                         {{-- if using list --}}
-                        <ul class="text-lg-left">
-                            <li>Terbentuknya generasi muda yang Religius</li>
-                            <li>Terlaksananya proses penilaian yang obyektif</li>
-                            <li>Terlaksananya penyelesaian masalah dengan pendekatan humanis</li>
-                            <li>Terwujudnya sikap mandiri pada peserta didik</li>
-                            <li>Terlaksananya pengelolahan dan pembiayaan yang amanah</li>
-                            <li>Terwujudnya sikap toleransi terhadap civitas</li>
-                            <li>Terwujudnya generasi yang berakhlakul karimah</li>
-                            <li>Terbentuknya jiwa nasionalis</li>
-                        </ul>
+                                <ul class="text-lg-left">
+                                    <li>Terbentuknya generasi muda yang Religius</li>
+                                    <li>Terlaksananya proses penilaian yang obyektif</li>
+                                    <li>Terlaksananya penyelesaian masalah dengan pendekatan humanis</li>
+                                    <li>Terwujudnya sikap mandiri pada peserta didik</li>
+                                    <li>Terlaksananya pengelolahan dan pembiayaan yang amanah</li>
+                                    <li>Terwujudnya sikap toleransi terhadap civitas</li>
+                                    <li>Terwujudnya generasi yang berakhlakul karimah</li>
+                                    <li>Terbentuknya jiwa nasionalis</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6 col-lg-6 text-lg-center">
+                        <div class="card col-sm-12 col-lg-12 mt-3 mb-2">
+                            <h1 class="mt-3 mb-0">MOTO</h1>
+                            <hr>
+                            <div class="card-body col-sm-12 col-lg-12">
+                                 {{-- if using list --}}
+                                <ul class="text-lg-left">
+                                    <p> KERJA IKHLAS </p>
+                                    <p> KERJA KERAS </p>
+                                    <P> KERJA CERDAS </P>
+                                    <P> KERJA TUNTAS</p>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </div>
-
-            <div class="col-sm-6 col-lg-6 text-lg-center">
-                <div class="card col-sm-12 col-lg-12 mt-3 mb-2">
-                    <h1 class="mt-3 mb-0">MOTO</h1>
-                    <hr>
-                        {{-- if using list --}}
-                        <ul class="text-lg-left">
-                            <p> KERJA IKHLAS </p>
-                            <p> KERJA KERAS </p>
-                            <P> KERJA CERDAS </P>
-                            <P> KERJA TUNTAS</p>
-                        </ul>
-                </div>
-            </div>
-        </div>
-
             </div>
         </div>
     </div>

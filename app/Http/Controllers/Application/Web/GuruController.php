@@ -19,7 +19,7 @@ class GuruController extends Controller
     {
         $no = 1;
 
-        $gurus = Guru::get();
+        $gurus = Guru::paginate(10);
 
         return view('application.web.guru.index', [
             'no' => $no,
@@ -54,6 +54,7 @@ class GuruController extends Controller
             'agama',
             'mapel',
             'jabatan',
+            'tahun_menjabat',
 
             'photo_id'
         ]);
@@ -83,6 +84,7 @@ class GuruController extends Controller
         $guru->gender = $request->gender;
         $guru->mapel = $request->mapel;
         $guru->jabatan = $request->jabatan;
+        $guru->tahun_menjabat = $request->tahun_menjabat;
         $guru->agama = $request->agama;
 
 
@@ -141,6 +143,7 @@ class GuruController extends Controller
             'agama',
             'mapel',
             'jabatan',
+            'tahun_menjabat',
 
             'photo_id'
         ]);
@@ -159,8 +162,9 @@ class GuruController extends Controller
 
             $photo = Photo::create(['file_photo' => "/" . $name]);
 
-            $guru->photo_id = $photo;
             $photo = $photo->id;
+            $guru->photo_id = $photo;
+
         }
 
         $guru->nomer_induk = $request->nomer_induk;
@@ -171,6 +175,7 @@ class GuruController extends Controller
         $guru->mapel = $request->mapel;
         $guru->jabatan = $request->jabatan;
         $guru->agama = $request->agama;
+        $guru->tahun_menjabat = $request->tahun_menjabat;
 
 
         DB::transaction(function () use ($guru) {

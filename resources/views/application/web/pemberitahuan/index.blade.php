@@ -65,14 +65,14 @@
                         </div>
                         <a href="{{ route('admin.pemberitahuan.create') }}" class="button btn btn-outline-dark">Tambah
                             (+)</a>
-                        <table id="example2" class="table table-bordered table-hover">
+                        <table id="" class="table table-bordered table-hover">
                             <thead>
                                 <tr>
                                     <th style="width: 1.5rem">No</th>
                                     <th>Photo</th>
                                     <th style="width: 11rem">Judul</th>
                                     <th style="width: 40rem">Isi Pemberitahuan</th>
-                                    <th style="width: 6rem">Pembuat</th>
+                                    <th style="width: 6rem">Jenis Pemberitahuan</th>
                                     <th style="width: 13rem">Status</th>
                                 </tr>
                             </thead>
@@ -102,25 +102,26 @@
                                             {{ substr($pemberitahuan->isi,0,400) }}
 
                                             &nbsp;
-                                            <span class="read-more-show hide_content text-bold">
+                                            {{-- <span class="read-more-show hide_content text-bold">
                                                 Read More
-                                            </span>
+                                            </span> --}}
 
                                             <span class="read-more-content">
                                                 {{substr($pemberitahuan->isi,300,strlen($pemberitahuan->isi))}}
 
                                                 &nbsp;
-                                                <span class="read-more-hide hide_content text-bold">
+                                                {{-- <span class="read-more-hide hide_content text-bold">
                                                     Read Less
-                                                </span>
+                                                </span> --}}
                                             </span>
                                             @else
-                                            {{ $pemberitahuan->isi }}
+                                            {!! nl2br(e($pemberitahuan->isi)) !!}
                                             @endif
                                         </div>
                                     </td>
                                     <td class="text-center">
-                                        {{ $pemberitahuan->author == 'Kepsek' ? 'Kepala Sekolah' : 'Admin' }}
+                                        {{ $pemberitahuan->jenis == 'prestasi' ? 'Prestasi' : 'Kegiatan' }}
+
                                     </td>
 
                                     <td class="text-center">
@@ -167,6 +168,14 @@
                             @endif
                         </table>
                     </div>
+
+                    <nav aria-label="Page navigation example" class="pr-4 pl-4">
+                        <div class="d-flex justify-content-between">
+                            Total Pemberitahuan : {{ $pemberitahuans->count() }}
+                            {{ $pemberitahuans->links() }}
+                        </div>
+                    </nav>
+
                     <!-- /.card-body -->
                 </div>
                 <!-- /.card -->

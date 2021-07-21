@@ -10,8 +10,8 @@
             <div class="col-sm-6">
                 <ol class="breadcrumb float-sm-right">
                     <li class="breadcrumb-item"><a href="{{ route('admin.home') }}">Dashboard</a></li>
-                    <li class="breadcrumb-item"><a href="{{ route('admin.guru.index') }}">Data Guru</a></li>
-                    <li class="breadcrumb-item active">Edit Data Guru</li>
+                    <li class="breadcrumb-item"><a href="{{ route('admin.guru.index') }}">Data Guru & Staf</a></li>
+                    <li class="breadcrumb-item active">Edit Data Guru & Staf</li>
                 </ol>
             </div>
         </div>
@@ -26,7 +26,7 @@
                 <div class="card">
 
                     <div class=" card-header">
-                        <h3 class="card-title">Update Data Guru SMP Nurul Halim Widasari</h3>
+                        <h3 class="card-title">Update Data Guru & Staf SMP Nurul Halim Widasari</h3>
                     </div>
                     <!-- /.card-header -->
                     <div class="card-body">
@@ -73,7 +73,7 @@
 
                                 {{-- Form --}}
 
-                                <div class="col-sm-8">
+                                {{-- <div class="col-sm-8">
 
                                     <div class="form-group">
                                         <label for="photo_id">Photos</label>
@@ -88,10 +88,23 @@
                                         <div class="invalid-feedback" style="display: block !important;">{{ $message }}
                                         </div>
                                         @enderror
-                                    </div>
+                                    </div> --}}
+
+                                    <div class="col-sm-8">
+
+                                        <div class="form-group">
+                                            <label for="photo_id">Photos</label>
+                                            <input type="file" name="photo_id" id="photo_id" class="form-control"
+                                                value="{{ old('photo_id') }}">
+
+                                            @error('photo')
+                                            <div class="invalid-feedback" style="display: block !important;">{{ $message }}
+                                            </div>
+                                            @enderror
+                                        </div>
 
                                     <div class="form-group">
-                                        <label for="nomer_induk">Nomer Induk</label>
+                                        <label for="nomer_induk">Nomer Induk Yayasan &nbsp;&nbsp;*Wajib diisi</label>
                                         <input type="text" class="form-control" name="nomer_induk" id="nomer_induk"
                                             placeholder="Enter Nomer Induk" value="{{ $gurus->nomer_induk }}">
 
@@ -124,18 +137,46 @@
                                     </div>
 
                                     <div class="form-group">
+                                        <label for="tahun_menjabat">Tahun Menjabat</label>
+                                        <input type="text" class="form-control" name="tahun_menjabat" id="tahun_menjabat"
+                                            placeholder="Masukan Tahun Menjabat" value="{{ $gurus->tahun_menjabat }}">
+
+                                        @error('tahun_menjabat')
+                                        <div class="invalid-feedback" style="display: block !important;">{{ $message }}
+                                        </div>
+                                        @enderror
+                                    </div>
+
+                                    <div class="form-group">
                                         <label for="jabatan">Jabatan</label>
                                         <select class="form-control" name="jabatan" id="jabatan">
                                             <option value="">Choose Options</option>
-                                            <option value="Yayasan" @if($gurus->jabatan == 'Yayasan' )
-                                                selected="selected"
-                                                @endif> Yayasan (jika ada) </option>
-                                            <option value="Kepsek" @if($gurus->jabatan == 'Kepsek' ) selected="selected"
+                                            <option value="ketua-Yayasan" @if(old('jabatan')=='ketua-Yayasan' ) selected="selected"
+                                                @endif> Ketua Yayasan  </option>
+                                            <option value="Wa-Yayasan" @if(old('jabatan')=='Wa-Yayasan') selected="selected"
+                                            @endif> Wakil Ketua Yayasan</option>
+                                            <option value="Kepsek" @if(old('jabatan')=='Kepsek' ) selected="selected"
                                                 @endif> Kepala Sekolah </option>
-                                            <option value="Wa-Kepsek" @if($gurus->jabatan == 'Wa-Kepsek' )
-                                                selected="selected" @endif> Wakil Kepala Sekolah</option>
-                                            <option value="Guru" @if($gurus->jabatan == 'Guru' ) selected="selected"
+                                            <option value="Wa-Kepsek" @if(old('jabatan')=='Wa-Kepsek' ) selected="selected"
+                                                @endif> Wakasek Kesiswaan</option>
+                                            <option value="Wakep-Kurikulum" @if(old('jabatan')=='Wakep-Kurikulum') selected="selected"
+                                                @endif> Wakasek Kurikulum</option>
+                                            <option value="Guru" @if(old('jabatan')=='Guru' ) selected="selected"
                                                 @endif> Guru </option>
+                                            <option value="Guru-BK" @if(old('jabatan')=='Guru-BK') selected="selected"
+                                                @endif> Guru Bimbingan Konseling (BK) </option>
+                                            <option value="Kep-TU" @if(old('jabatan')=='Kep-TU') selected="selected"
+                                                @endif> Kepala Tata Usaha </option>
+                                            <option value="Staf-TU" @if(old('jabatan')=='Staf-TU' ) selected="selected"
+                                                @endif> Staf Tata Usaha </option>
+                                            <option value="Staf-Perpus" @if(old('jabatan')=='Staf-Perpus') selected="selected"
+                                                @endif> Staf Perpustakaan </option>
+                                            <option value="Staf-lab" @if(old('jabatan')=='Staf-lab') selected="selected"
+                                                @endif> Staf Lab. Komputer </option>
+                                            <option value="Satpam" @if(old('jabatan')=='Satpam') selected="selected"
+                                                @endif> Satpam Sekolah </option>
+                                            <option value="Penjaga-Sekolah" @if(old('jabatan')=='Penjaga-Sekolah') selected="selected"
+                                                @endif> Penjaga Sekolah </option>
                                         </select>
 
                                         @error('jabatan')
@@ -167,7 +208,7 @@
                                     </div>
 
                                     <div class="form-group">
-                                        <label for="agama">Status</label>
+                                        <label for="agama">Agama</label>
                                         <select class="form-control" name="agama" id="agama">
                                             <option value="">Choose Options</option>
                                             <option value="Islam" @if($gurus->agama == 'Islam' ) selected="selected"
@@ -222,7 +263,7 @@
                                 <button type="submit"
                                     class="btn btn-outline-light col-lg-6 mb-3 mr-auto ml-auto text-bold"
                                     style="color: black; background: blue">
-                                    Update Guru</button>
+                                    Update Data</button>
                             </div>
                         </form>
 
@@ -231,7 +272,7 @@
                             {{ method_field('DELETE') }}
 
                             <button type="submit" class="btn btn-danger col-12 mb-3 mr-auto ml-auto">
-                                Deleted This Teacher?</button>
+                                Hapus Data?</button>
                         </form>
                     </div>
                     <!-- End Card Header  -->

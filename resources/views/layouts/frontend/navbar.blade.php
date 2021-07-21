@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top py-4">
+<nav class="navbar navbar-expand-lg navbar-dark bg-success sticky-top py-4">
     <div class="container-fluid">
         <a class="navbar-brand" href="">SMP Nurul Halim Widasari</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
@@ -15,12 +15,11 @@
                         role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         Tentang Kami
                     </a>
-                    <div class="dropdown-menu bg-dark" aria-labelledby="navbarDropdownMenuLink">
-                        <a class="dropdown-item text-warning" href="{{ route('sambutan-kepala-sekolah') }}">Sambutan
-                            Kepala Sekolah</a>
-                        <a class="dropdown-item text-warning" href="{{ route('visi-misi') }}">Visi dan Misi</a>
+                    <div class="dropdown-menu bg-success" aria-labelledby="navbarDropdownMenuLink">
                         <a class="dropdown-item text-warning" href="{{ route('profile-sekolah') }}">Profile Sekolah</a>
-                        <a class="dropdown-item text-warning" href="{{ route('guru-pengajar') }}">Guru Pengajar</a>
+                        <a class="dropdown-item text-warning" href="{{ route('visi-misi') }}">Visi dan Misi</a>
+                        <a class="dropdown-item text-warning" href="{{ route('prestasi-sekolah') }}">Prestasi Sekolah</a>
+                        <a class="dropdown-item text-warning" href="{{ route('guru-pengajar') }}">Guru Pengajar & Staff</a>
                     </div>
                 </li>
                 <li class="nav-item">

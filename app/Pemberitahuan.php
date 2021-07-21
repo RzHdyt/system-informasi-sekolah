@@ -11,7 +11,7 @@ class Pemberitahuan extends Model
         'judul',
         'isi',
         'status',
-        'author',
+        'jenis',
 
         'photo_id'
     ];

@@ -19,7 +19,7 @@ class BerandaController extends Controller
     public function beranda()
     {
         $no = 0;
-        $gurus = Guru::where('jabatan', '!=', 'Guru')->paginate(4);
+        $gurus = Guru::where('jabatan', '!=', 'Guru')->paginate(2000);
 
         foreach ($gurus as $guru) {
             $dateIn = date_create($guru->tanggal_lahir);
@@ -44,10 +44,10 @@ class BerandaController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function sambutanKepsek()
+    public function prestasiSekolah()
     {
-        $pemberitahuans = Pemberitahuan::where('author', 'Kepsek')->paginate(3);
-        return view('application.frontend.tentang-kami.sambutan-kepsek', [
+        $pemberitahuans = Pemberitahuan::where('jenis', 'prestasi')->paginate(3);
+        return view('application.frontend.tentang-kami.prestasi-sekolah', [
             'pemberitahuans' => $pemberitahuans,
         ]);
     }
@@ -86,7 +86,7 @@ class BerandaController extends Controller
      */
     public function guruPengajar()
     {
-        $gurus = Guru::where('jabatan', 'Guru')->paginate(8);
+         $gurus = Guru::paginate(1000);
 
         foreach ($gurus as $guru) {
             $dateIn = date_create($guru->tanggal_lahir);
@@ -103,6 +103,8 @@ class BerandaController extends Controller
         ]);
     }
 
+
+
     // End page Tentang Kami -------------------------------------------------------------------------------------------
 
     /**
@@ -112,7 +114,7 @@ class BerandaController extends Controller
      */
     public function kegiatan()
     {
-        $pemberitahuans = Pemberitahuan::where('author', 'Admin')->paginate(3);
+        $pemberitahuans = Pemberitahuan::where('jenis', 'kegiatan')->paginate(3);
 
         return view('application.frontend.kegiatan-sekolah.kegiatan', [
             'pemberitahuans' => $pemberitahuans,

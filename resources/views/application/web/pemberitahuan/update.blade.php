@@ -10,8 +10,8 @@
             <div class="col-sm-6">
                 <ol class="breadcrumb float-sm-right">
                     <li class="breadcrumb-item"><a href="{{ route('admin.home') }}">Dashboard</a></li>
-                    <li class="breadcrumb-item"><a href="{{ route('admin.guru.index') }}">Data Guru</a></li>
-                    <li class="breadcrumb-item active">Edit Data Guru</li>
+                    <li class="breadcrumb-item"><a href="{{ route('admin.pemberitahuan.index') }}">Pemberitahuan</a></li>
+                    <li class="breadcrumb-item active">Edit Pemberitahuan</li>
                 </ol>
             </div>
         </div>
@@ -98,9 +98,9 @@
                                     </div>
 
                                     <div class="form-group">
-                                        <label for="isi">Isi Pengumuman</label>
+                                        <label for="isi">Isi Pemberitahuan&nbsp;&nbsp;*Wajib diisi</label>
                                         <textarea class="form-control" name="isi" id="isi" placeholder="Enter Text"
-                                            cols="30" rows="10"> {{ $pemberitahuans->isi }} </textarea>
+                                            cols="30" rows="10"> </textarea>
 
                                         @error('isi')
                                         <div class="invalid-feedback" style="display: block !important;">{{ $message }}
@@ -109,22 +109,22 @@
                                     </div>
 
                                     <div class="form-group">
-                                        <label for="author">Pembuat</label>
-                                        <select class="form-control" name="author" id="author">
+                                        <label for="jenis">Jenis Pemberitahuan</label>
+                                        <select class="form-control" name="jenis" id="jenis">
                                             <option value="">Choose Options</option>
-                                            <option value="Kepsek" @if($pemberitahuans->author == 'Kepsek' )
+                                            <option value="prestasi" @if($pemberitahuans->jenis == 'prestasi' )
                                                 selected="selected"
                                                 @endif>
-                                                Kepala Sekolah
+                                                Prestasi
                                             </option>
-                                            <option value="Admin" @if($pemberitahuans->author == 'Admin' )
+                                            <option value="kegiatan" @if($pemberitahuans->jenis == 'kegiatan' )
                                                 selected="selected"
                                                 @endif>
-                                                Admin
+                                                Kegiatan
                                             </option>
                                         </select>
 
-                                        @error('author')
+                                        @error('jenis')
                                         <div class="invalid-feedback" style="display: block !important;">{{ $message }}
                                         </div>
                                         @enderror
@@ -147,7 +147,7 @@
                             {{ method_field('DELETE') }}
 
                             <button type="submit" class="btn btn-danger col-12 mb-3 mr-auto ml-auto">
-                                Deleted This Announcement?</button>
+                                Hapus Pemberitahuan?</button>
                         </form>
                     </div>
                     <!-- End Card Header  -->

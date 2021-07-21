@@ -23,6 +23,7 @@ class CreateGurusTable extends Migration
             $table->string('gender')->nullable();
             $table->string('mapel')->nullable();
             $table->string('jabatan')->nullable();
+            $table->string('tahun_menjabat')->nullable();
 
             $table->integer('photo_id')->index()->nullable();
             $table->timestamps();

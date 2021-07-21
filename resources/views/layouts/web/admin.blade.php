@@ -44,7 +44,7 @@
 <body class="hold-transition sidebar-mini layout-fixed">
     <div class="wrapper">
         {{-- nav header --}}
-        <nav class="main-header navbar navbar-expand navbar-white navbar-light">
+        <nav class="main-header navbar navbar-expand" >
             @include('layouts.web.module.header')
         </nav>
         {{-- nav asidebar --}}
@@ -60,7 +60,7 @@
 
         <footer class="main-footer">
             <div class="card-footer" style="color: black; background: white">
-                <strong>2021</strong>
+                <strong style="color: black">2021</strong>
 
                 <div class="float-right d-none d-sm-inline-block">
                     <b>SMP Nurul Halim Widasari</b>

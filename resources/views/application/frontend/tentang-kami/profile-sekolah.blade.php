@@ -56,9 +56,65 @@
                     <div class="col-sm-8 col-lg-8  mt-3 mb-3 ">
                         <h1>{{ 'Profile SMP Nurul Halim Widasari' }}</h1>
                         <hr>
-                        <p>
-                            Sejarah SMP Nurul Halim Widasari
+                        <h4 class="mt-2 text-center"> IDENTITAS SEKOLAH </h4>
                         </p>
+                        <p>
+                            <h6 class="text-justify">
+                                Nama Sekolah&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: SMP NURUL HALIM WIDASARI</p>
+                            <p> Nama Kelpala Sekolah&nbsp;&nbsp;: HUMAEDI, S.Ag </p>
+                            <p> NPSN&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: 20216093 </p>
+                            <p> Jenjang Pendidikan &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: SMP</p>
+                            <p> Status Sekolah&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: Swasta</p>
+                            <p> Alamat Sekolah&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: Jl. Raya Ujung Jaya No. 212 Rt/Rw 04/03 Kelurahan. Ujungjaya,  </p>
+                            <p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Kec. Widasari, Kab. Indramayu, Prov, Jawa Barat, Indonesia
+                            <p> Kode Pos&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: 45271</p>
+                            <p> SK Pendiri Sekolah&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: 402/102/KEP/E/97</p>
+                            <p> Tanggal SK Pendirian&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: 15-06-1994 </p>
+                            <p> Status Kepemilikan&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: Yayasan </p>
+                            <p> SK Izin Operasional&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: 402/102/KEP/E/94 </p>
+                            <p> Nomor Telepon&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: (0234) 351669 </p>
+                            <p> Nomor Fax&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: 351669 </p>
+                            <p> Email&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: smpnurulhalim@gmail.com </p>
+                            </h6>
+                        </p>
+
+                        <div class="col-sm-15 col-lg-15  mt-2 mb-2 ">
+                            <br>
+                            <hr>
+                            <p>
+                                 <h4 class="text-center"> EKSTRAKULIKULER & PENGEMBANGAN DIRI </h4>
+                             </p>
+                             {{-- <h6 class="text-justify"> --}}
+                                <ul class="text-lg-left">
+                                    <li>PRAMUKA</li>
+                                    <li>PASKIBRA</li>
+                                    <li>PATROLI KEAMANAN SEKOLAH (PKS)</li>
+                                    <li>PMR</li>
+                                    <li>MARCHING BAND</li>
+                                    <li>BOLA VOLI</li>
+                                    <li>KEWIRAUSAHAAN</li>
+                                    <li>KALIGRAFI</li>
+                                    <li>KEPUTIAN </li>
+                                    <li>HADROH</li>
+                                    <li>BELAJAR TILAWAH (BT)</li>
+                                    <li>AKTIVIS DAKWAH SEKOLAH (ADS)</li>
+                                    <li>SANGGAR TARI</li>
+                                    <li>IPS CLUB</li>
+                                    <li>MATH CLUB</li>
+                                    <li>JAPANIS CLUB</li>
+                                    <li>ENGLISH CLUB</li>
+                                    <li>TAHFIZ QUR'AN</li>
+                                </ul>
+                             {{-- </h6> --}}
+                        </div>
+
+
+                        <div class="col-sm-15 col-lg-15  mt-2 mb-2 ">
+                            <br>
+                            <hr>
+                            <p>
+                                 <h4 class="text-center"> SEJARAH YAYASAN & SMP NURUL HALIM WIDASARI </h4>
+                             </p>
                         <p class="text-justify">Smp Nurul Halim Widasari merupakan lembaga pendidikan
                             yang dinaungi oleh Yayasan Nurul Halim. Sekilas riwayat berdirinya yayasan dengan memunculkan nama
                             "Nurul Halim" berdasarkan kronologi sebagai berikut.</p>
@@ -93,6 +149,7 @@
                             Dan dari tahun 2012 hingga saat ini yang menjabat sebagai Kepala SMP Nurul Halim Widasari yaitu Bapak Humaedi, S.Ag.
                         </p>
 
+                        </div>
                     </div>
                 </div>
             </div>

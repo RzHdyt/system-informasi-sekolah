@@ -18,7 +18,7 @@ class CreatePemberitahuansTable extends Migration
             $table->integer('photo_id')->index()->nullable();
             $table->string('judul');
             $table->string('isi', 4000);
-            $table->string('author')->nullable();
+            $table->string('jenis')->nullable();
             $table->integer('status')->default(0);
             $table->timestamps();
         });

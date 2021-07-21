@@ -18,7 +18,7 @@ class PemberitahuanController extends Controller
     public function index()
     {
         $no = 1;
-        $pemberitahuans = Pemberitahuan::get();
+        $pemberitahuans = Pemberitahuan::paginate(10);
         return view('application.web.pemberitahuan.index', [
             'no' => $no,
             'pemberitahuans' => $pemberitahuans,
@@ -46,7 +46,7 @@ class PemberitahuanController extends Controller
         $this->validate($request, [
             'judul',
             'isi',
-            'author',
+            'jenis',
 
             'photo_id'
         ]);
@@ -71,7 +71,7 @@ class PemberitahuanController extends Controller
 
         $pemberitahuans->judul = $request->judul;
         $pemberitahuans->isi = $request->isi;
-        $pemberitahuans->author = $request->author;
+        $pemberitahuans->jenis = $request->jenis;
 
 
         DB::transaction(function () use ($pemberitahuans) {
@@ -123,7 +123,7 @@ class PemberitahuanController extends Controller
         $this->validate($request, [
             'judul',
             'isi',
-            'author',
+            'jenis',
 
             'photo_id'
         ]);
@@ -149,7 +149,7 @@ class PemberitahuanController extends Controller
 
         $pemberitahuans->judul = $request->judul;
         $pemberitahuans->isi = $request->isi;
-        $pemberitahuans->author = $request->author;
+        $pemberitahuans->jenis = $request->jenis;
 
 
         DB::transaction(function () use ($pemberitahuans) {
